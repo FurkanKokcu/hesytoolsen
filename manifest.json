@@ -1,0 +1,16 @@
+{
+  "name": "Hesy Tools",
+  "short_name": "HesyTools",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0275d8",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "round-icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
