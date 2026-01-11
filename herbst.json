@@ -1,0 +1,62 @@
+[
+  {
+    "baslik": "Upper Jaw Tests",
+    "kisaKod": "ust",
+    "testler": [
+      {
+        "soru": "TEST 1: If the base plate moves when the mouth is half open",
+        "icerik": "<strong>Problem:</strong> Effect of the Buccinator muscle.<br><br><strong>Correction:</strong> Both sides, aligned with 1st and 2nd premolars and 1st molar."
+      },
+      {
+        "soru": "TEST 2: If the base plate moves when the mouth is opened widely (like yawning)",
+        "icerik": "<strong>Problem:</strong> Pterygomaxillary raphe and anterior fibers of buccinator/masseter muscles.<br><br><strong>Correction:</strong> Both sides, aligned with 2nd molars behind the tuberosities."
+      },
+      {
+        "soru": "TEST 3: If the base plate moves during whistling or sucking movements",
+        "icerik": "<strong>Problem:</strong> Labial vestibule and labial frenulum area are too long.<br><br><strong>Correction:</strong> Aligned with the labial frenulum and labial vestibule area."
+      },
+      {
+        "soru": "TEST 4: If it moves when the lip commissure moves backward/downward while smiling",
+        "icerik": "<strong>Correction:</strong> Aligned with the buccal frenulum and buccal vestibule area."
+      },
+      {
+        "soru": "TEST 5: If the base plate moves with 'Ah' sound or coughing",
+        "icerik": "<strong>Correction:</strong> The base plate should be shortened in the anterior-posterior direction."
+      }
+    ]
+  },
+  {
+    "baslik": "Lower Jaw Tests",
+    "kisaKod": "alt",
+    "testler": [
+      {
+        "soru": "TEST 1: If the base plate moves when the mouth is half open",
+        "icerik": "<strong>Correction:</strong> Border lengths in the buccal vestibule area are shortened."
+      },
+      {
+        "soru": "TEST 2: If the base plate moves when the mouth is opened widely",
+        "icerik": "<strong>Problem:</strong> Pterygomaxillary raphe and anterior fibers of masseter muscles.<br><br><strong>Correction:</strong> Retromolar region aligned with molars on both sides is shortened."
+      },
+      {
+        "soru": "TEST 3: If the base plate moves when the tongue is extended out",
+        "icerik": "<strong>Problem:</strong> Movements of the Mylohyoid muscle.<br><br><strong>Correction:</strong> The mylohyoid muscle on the lingual side aligned with molars should be relieved, the plate should be made concave if necessary."
+      },
+      {
+        "soru": "TEST 4: If the plate moves when the tongue tip licks the inside of the cheek",
+        "icerik": "<strong>Correction:</strong> Shortening is done aligned with canines and premolars."
+      },
+      {
+        "soru": "TEST 5: If the base plate moves when the tongue is directed towards the nose",
+        "icerik": "<strong>Problem:</strong> Incisors and lingual frenulum part on the lingual side.<br><br><strong>Correction:</strong> Intervention is made in these regions."
+      },
+      {
+        "soru": "TEST 6: If there is pain during swallowing",
+        "icerik": "<strong>Problem:</strong> Superior constrictor muscle of the pharynx.<br><br><strong>Correction:</strong> The lingual corner of the plate should be shortened and polished."
+      },
+      {
+        "soru": "TEST 7: If the plate moves during whistling/sucking movements",
+        "icerik": "<strong>Problem:</strong> Contraction of the O. oris muscle.<br><br><strong>Correction:</strong> Labial frenulum and anterior vestibule are adjusted."
+      }
+    ]
+  }
+]

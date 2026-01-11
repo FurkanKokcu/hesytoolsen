@@ -1,0 +1,62 @@
+[
+  {
+    "tani": "Sinus Post-Op Infection",
+    "id": "sinus",
+    "ilaclar": [
+      { "ad": "Amoxicillin + Clavulanate 1000 mg", "doz": "1 Box", "kullanim": "2x1" },
+      { "ad": "Ibuprofen 600 mg", "doz": "1 Box", "kullanim": "3x1" },
+      { "ad": "Chlorhexidine + Benzydamine Gargle", "doz": "1 Box", "kullanim": "3x1" },
+      { "ad": "Oxymetazoline 0.05% Nasal Spray", "doz": "1 Box", "kullanim": "3x1 (3 days)" },
+      { "ad": "Desloratadine 5 mg", "doz": "1 Box", "kullanim": "1x1" }
+    ]
+  },
+  {
+    "tani": "Quadruple Post-Op Infection",
+    "id": "dortlu",
+    "ilaclar": [
+      { "ad": "Amoxicillin + Clavulanate 1000 mg", "doz": "1 Box", "kullanim": "2x1" },
+      { "ad": "Metronidazole 500 mg", "doz": "1 Box", "kullanim": "3x1" },
+      { "ad": "Dexketoprofen 25 mg", "doz": "1 Box", "kullanim": "3x1" },
+      { "ad": "Chlorhexidine + Benzydamine Gargle", "doz": "1 Box", "kullanim": "3x1" }
+    ]
+  },
+  {
+    "tani": "Triple Post-Op Infection",
+    "id": "uclu",
+    "ilaclar": [
+      { "ad": "Amoxicillin + Clavulanate 1000 mg", "doz": "1 Box", "kullanim": "2x1" },
+      { "ad": "Ibuprofen 600 mg", "doz": "1 Box", "kullanim": "3x1" },
+      { "ad": "Chlorhexidine + Benzydamine Gargle", "doz": "1 Box", "kullanim": "3x1" }
+    ]
+  },
+  {
+    "tani": "Joint Myalgia-Myospasm",
+    "id": "eklem",
+    "ilaclar": [
+      { "ad": "Tizanidine 2 mg", "doz": "1 Box", "kullanim": "3x1" },
+      { "ad": "Ibuprofen 800 mg (Extended Release)", "doz": "1 Box", "kullanim": "2x1" }
+    ]
+  },
+  {
+    "tani": "Pre-Op Infection (Before Surgery)",
+    "id": "preop",
+    "ilaclar": [
+      { "ad": "Rifamycin 125 mg Injection", "doz": "1 Box", "kullanim": "1x1" },
+      { "ad": "Tenoxicam 20 mg Injection", "doz": "1 Box", "kullanim": "1x1" },
+      { "ad": "Dexamethasone 8 mg Injection", "doz": "1 Box", "kullanim": "1x1" }
+    ]
+  },
+    {
+    "tani": "Frequently Used Drugs",
+    "id": "sikca",
+    "ilaclar": [
+      { "ad": "Amoxicillin + Clavulanate 1000 mg", "doz": "1 Box", "kullanim": "2x1" },
+      { "ad": "Metronidazole 500 mg", "doz": "1 Box", "kullanim": "2x1" },
+      { "ad": "Clarithromycin 500 mg", "doz": "1 Box", "kullanim": "2x1" },
+      { "ad": "Paracetamol 500 mg", "doz": "1 Box", "kullanim": "3x1" },
+      { "ad": "Dexketoprofen 25 mg", "doz": "1 Box", "kullanim": "2x1" },
+      { "ad": "Chlorhexidine + Benzydamine Gargle", "doz": "1 Box", "kullanim": "3x1" },
+      { "ad": "Ibuprofen 600 mg", "doz": "1 Box", "kullanim": "3x1" }
+    ]
+  }
+]

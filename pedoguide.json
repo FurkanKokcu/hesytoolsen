@@ -1,0 +1,140 @@
+[
+  {
+    "yas": 4,
+    "bilgiler": [
+      "🟡 51 - Right Upper Primary Central (In Mouth)",
+      "🟡 52 - Right Upper Primary Lateral (In Mouth)",
+      "🟡 53 - Right Upper Primary Canine (In Mouth)",
+      "🟡 54 - Right Upper Primary 1st Molar (In Mouth)",
+      "🟡 55 - Right Upper Primary 2nd Molar (In Mouth)",
+      "🟡 61 - Left Upper Primary Central (In Mouth)",
+      "🟡 62 - Left Upper Primary Lateral (In Mouth)",
+      "🟡 63 - Left Upper Primary Canine (In Mouth)",
+      "🟡 64 - Left Upper Primary 1st Molar (In Mouth)",
+      "🟡 65 - Left Upper Primary 2nd Molar (In Mouth)",
+      "🟡 71 - Left Lower Primary Central (In Mouth)",
+      "🟡 72 - Left Lower Primary Lateral (In Mouth)",
+      "🟡 73 - Left Lower Primary Canine (In Mouth)",
+      "🟡 74 - Left Lower Primary 1st Molar (In Mouth)",
+      "🟡 75 - Left Lower Primary 2nd Molar (In Mouth)",
+      "🟡 81 - Right Lower Primary Central (In Mouth)",
+      "🟡 82 - Right Lower Primary Lateral (In Mouth)",
+      "🟡 83 - Right Lower Primary Canine (In Mouth)",
+      "🟡 84 - Right Lower Primary 1st Molar (In Mouth)",
+      "🟡 85 - Right Lower Primary 2nd Molar (In Mouth)"
+    ]
+  },
+  {
+    "yas": 5,
+    "bilgiler": [
+      "⚠️ 6-Year Molars (16, 26, 36, 46) Ready Under the Gum!",
+      "🟡 51 - Right Upper Primary Central (In Mouth - Root resorption started)",
+      "🟡 61 - Left Upper Primary Central (In Mouth - Root resorption started)",
+      "🟡 71 - Left Lower Primary Central (In Mouth - May be loose)",
+      "🟡 81 - Right Lower Primary Central (In Mouth - May be loose)",
+      "🟡 (All other primary teeth are soundly in the mouth)"
+    ]
+  },
+  {
+    "yas": 6,
+    "bilgiler": [
+      "🟢 36 - Left Lower 6-Year Molar ERUPTED",
+      "🟢 46 - Right Lower 6-Year Molar ERUPTED",
+      "🟢 16 - Right Upper 6-Year Molar ERUPTED",
+      "🟢 26 - Left Upper 6-Year Molar ERUPTED",
+      "🔴 71 - Left Lower Primary Central (LOOSE / EXFOLIATED)",
+      "🔴 81 - Right Lower Primary Central (LOOSE / EXFOLIATED)",
+      "🟢 31 - Left Lower Permanent Central (About to Erupt/Erupted)",
+      "🟢 41 - Right Lower Permanent Central (About to Erupt/Erupted)",
+      "🟡 51, 61 - Upper Primary Centrals (Still in Mouth)",
+      "🟡 Primary Laterals, Canines and Molars (B, C, D, E) In Mouth"
+    ]
+  },
+  {
+    "yas": 7,
+    "bilgiler": [
+      "🟢 11 - Right Upper Permanent Central ERUPTED (51 Exfoliated)",
+      "🟢 21 - Left Upper Permanent Central ERUPTED (61 Exfoliated)",
+      "🟢 32 - Left Lower Permanent Lateral ERUPTED (72 Exfoliated)",
+      "🟢 42 - Right Lower Permanent Lateral ERUPTED (82 Exfoliated)",
+      "🔴 52 - Right Upper Primary Lateral (LOOSE)",
+      "🔴 62 - Left Upper Primary Lateral (LOOSE)",
+      "🟡 53, 63 - Upper Primary Canines (In Mouth)",
+      "🟡 54, 64 - Upper Primary 1st Molars (In Mouth)",
+      "🟡 55, 65 - Upper Primary 2nd Molars (In Mouth)",
+      "🟡 73, 83 - Lower Primary Canines (In Mouth)",
+      "🟡 74, 84 - Lower Primary 1st Molars (In Mouth)",
+      "🟡 75, 85 - Lower Primary 2nd Molars (In Mouth)"
+    ]
+  },
+  {
+    "yas": 8,
+    "bilgiler": [
+      "🟢 12 - Right Upper Permanent Lateral ERUPTED",
+      "🟢 22 - Left Upper Permanent Lateral ERUPTED",
+      "🟢 11, 21 - Permanent Centrals (Present)",
+      "🟢 31, 32, 41, 42 - Lower Incisors (Present)",
+      "🟢 16, 26, 36, 46 - 6-Year Molars (Present)",
+      "🟡 53, 63 - Upper Primary Canines (Sound)",
+      "🟡 54, 64 - Upper Primary 1st Molars (Sound)",
+      "🟡 55, 65 - Upper Primary 2nd Molars (Sound)",
+      "🟡 73, 83 - Lower Primary Canines (May be loose)",
+      "🟡 74, 84 - Lower Primary 1st Molars (Sound)",
+      "🟡 75, 85 - Lower Primary 2nd Molars (Sound)"
+    ]
+  },
+  {
+    "yas": 9,
+    "bilgiler": [
+      "🟢 33 - Left Lower Permanent Canine ERUPTED (73 Exfoliated)",
+      "🟢 43 - Right Lower Permanent Canine ERUPTED (83 Exfoliated)",
+      "🔴 74 - Left Lower Primary 1st Molar (LOOSE)",
+      "🔴 84 - Right Lower Primary 1st Molar (LOOSE)",
+      "🔴 54 - Right Upper Primary 1st Molar (LOOSE)",
+      "🔴 64 - Left Upper Primary 1st Molar (LOOSE)",
+      "🟡 53, 63 - Upper Primary Canines (Still in Mouth)",
+      "🟡 55, 65 - Upper Primary 2nd Molars (Still in Mouth)",
+      "🟡 75, 85 - Lower Primary 2nd Molars (Still in Mouth)"
+    ]
+  },
+  {
+    "yas": 10,
+    "bilgiler": [
+      "🟢 14 - Right Upper 1st Premolar ERUPTED (54 Exfoliated)",
+      "🟢 24 - Left Upper 1st Premolar ERUPTED (64 Exfoliated)",
+      "🟢 34 - Left Lower 1st Premolar ERUPTED (74 Exfoliated)",
+      "🟢 44 - Right Lower 1st Premolar ERUPTED (84 Exfoliated)",
+      "🔴 55 - Right Upper Primary 2nd Molar (LOOSE)",
+      "🔴 65 - Left Upper Primary 2nd Molar (LOOSE)",
+      "🔴 75 - Left Lower Primary 2nd Molar (LOOSE)",
+      "🔴 85 - Right Lower Primary 2nd Molar (LOOSE)",
+      "🔴 53, 63 - Upper Primary Canines (LOOSE)",
+      "🟡 Lower E's and Upper C's are about to exfoliate."
+    ]
+  },
+  {
+    "yas": 11,
+    "bilgiler": [
+      "🟢 15 - Right Upper 2nd Premolar ERUPTED (55 Exfoliated)",
+      "🟢 25 - Left Upper 2nd Premolar ERUPTED (65 Exfoliated)",
+      "🟢 35 - Left Lower 2nd Premolar ERUPTED (75 Exfoliated)",
+      "🟢 45 - Right Lower 2nd Premolar ERUPTED (85 Exfoliated)",
+      "🟢 13 - Right Upper Permanent Canine ERUPTED (53 Exfoliated)",
+      "🟢 23 - Left Upper Permanent Canine ERUPTED (63 Exfoliated)",
+      "⚪ No Primary Teeth Left in Mouth (Generally).",
+      "⚠️ If there are still primary teeth, extraction may be indicated."
+    ]
+  },
+  {
+    "yas": 12,
+    "bilgiler": [
+      "🟢 17 - Right Upper 2nd Molar ERUPTED",
+      "🟢 27 - Left Upper 2nd Molar ERUPTED",
+      "🟢 37 - Left Lower 2nd Molar ERUPTED",
+      "🟢 47 - Right Lower 2nd Molar ERUPTED",
+      "🟢 All Incisors, Canines, and Premolars are Complete.",
+      "🟢 1st Molars (6-Year) are Complete.",
+      "⚪ Total 28 Teeth Present."
+    ]
+  }
+]
