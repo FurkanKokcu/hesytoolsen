@@ -265,8 +265,22 @@
     </div>
 
   </div>
-  <div id="periotab" class="container tab-pane fade text-center">
+  <div id="periotab" class="container tab-pane fade text-center" x-data={atasmankaybi:0}>
     <div class="form-group text-center">
+      <label for="usr"></label>
+      <form>
+        <div class="form-group">
+          <img class="w-100"src="who.png" alt="">
+          
+          <input type="range" 
+                class="form-control-range" 
+                x-model="atasmankaybi" 
+                min="0" 
+                max="12" 
+                step="0.5" 
+                value="0">
+        </div>
+      </form>
       <label for="usr"></label>
       <input type="number" class="form-control" x-model="diskaybi" placeholder="Number of Tooth Loss">
       <input type="number" class="form-control" x-model="atasmankaybi" placeholder="Attachment Loss">
