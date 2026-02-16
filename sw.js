@@ -8,6 +8,8 @@ const DOSYALAR = [
   "./lathas.json",       // Eğer json kullanıyorsan
   "./herbst.json",       // Eğer json kullanıyorsan
   "./round-icon-new.png", // Logon
+  "./who.png",
+  "./mainlogo-Photoroom.png",
   "./manifest.json",
   "https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css",
   "https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js",
