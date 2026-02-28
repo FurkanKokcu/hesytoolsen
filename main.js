@@ -112,9 +112,9 @@ $('.dropdown-menu .dropdown-item, .nav-item .nav-link').on('click', function(){
                 evre = 4;
             }
 
-            if (sig < 10) {
+            if (sig === 0) {
                 drc = "A";
-            } else if (sig < 20) {
+            } else if (sig < 10) {
                 drc = "B";
             } else {
                 drc = "C";
