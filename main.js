@@ -17,25 +17,25 @@ $('.dropdown-menu .dropdown-item, .nav-item .nav-link').on('click', function(){
         }
     });
 
-    // 2. ISSUE: UNABLE TO GO BACK (BUG FIX)
+    // ISSUE 2: CANNOT RETURN (BUG FIX)
     // When a tab is clicked (shown.bs.tab event), we do a cleanup
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         
-        // First, we rip the "active" tag off everyone
+        // First, we remove the "active" label from everyone
         $('.nav-link').removeClass('active');
         $('.dropdown-item').removeClass('active');
         
-        // We only give the "active" tag to the friend currently clicked
+        // We only give the "active" label to the currently clicked item
         $(e.target).addClass('active');
 
-        // IF the clicked thing is inside a dropdown (like Periodontitis),
-        // we also highlight its parent "Periofind" button so it's clear
+        // IF the clicked item is inside a dropdown (like Periodontitis),
+        // we also highlight its parent "Periofind" button so it's visible
         if ($(e.target).hasClass('dropdown-item')) {
-            $('#navbardrop').addClass('active'); // The ID of the main title in Navbar
+            $('#navbardrop').addClass('active'); // The ID of the main title in the navbar
         }
     });
 
-    const URL = "./my_model/";
+const URL = "./my_model/";
 
     let model, webcam, labelContainer, maxPredictions;
 
@@ -47,12 +47,12 @@ $('.dropdown-menu .dropdown-item, .nav-item .nav-link').on('click', function(){
         model = await tmImage.load(modelURL, metadataURL);
         maxPredictions = model.getTotalClasses();
 
-        // 1. DEĞİŞİKLİK: Arka kamerada ayna efekti olmaması için flip = false yapıyoruz
+        // MODIFICATION 1: We set flip = false to avoid mirror effect on the rear camera
         const flip = false; 
         
         webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
         
-        // 2. DEĞİŞİKLİK: Arka kamerayı (environment) açması için parametre ekliyoruz
+        // MODIFICATION 2: We add a parameter to open the rear camera (environment)
         await webcam.setup({ facingMode: "environment" }); 
         
         await webcam.play();
@@ -114,6 +114,8 @@ $('.dropdown-menu .dropdown-item, .nav-item .nav-link').on('click', function(){
         alergycheck:'',
         kilo:'',
         profilaksisonuc:'',
+        probed:'',
+        patientres:'',
         
 
 
@@ -164,7 +166,7 @@ $('.dropdown-menu .dropdown-item, .nav-item .nav-link').on('click', function(){
             } else {
                 drc = "C";
             }
-            this.periosonuc = `The patient has Stage ${evre} Grade ${drc} periodontitis.`;
+            this.periosonuc = `Patient has stage ${evre} grade ${drc} periodontitis.`;
         },
 
         ging(){
@@ -172,17 +174,25 @@ $('.dropdown-menu .dropdown-item, .nav-item .nav-link').on('click', function(){
             let gingind
             const kana = Number(this.kanamaging);
             const yuzd = Number(this.yuzging);
+            const probe = Number(this.probed);
             if (yuzd === 0){
-                this.gingsonuc = "Surface count cannot be zero.";
+                this.gingsonuc = "Number of probed surfaces cannot be zero.";
                 return;
             }
             gingind=(kana/yuzd)*100
-            if(gingind>10){
+            if(gingind>10 && probe>4){
+                gingvar = "Patient has periodontitis!"
+            }else if (gingind>10){
                 gingvar = "Gingivitis present!"
-            }else{
+            }else if (probe <= 3){
                 gingvar = "Healthy!"
+            }else if (probe === 4){
+                gingvar = "Health on reduced periodontium!"
+            }else{
+                gingvar = ""
             }
-            this.gingsonuc = `Bleeding percentage %${gingind}  ${gingvar}`
+
+            this.gingsonuc = `Bleeding percentage ${gingind}%  ${gingvar}`
         },
 
         kons(){
@@ -194,12 +204,12 @@ $('.dropdown-menu .dropdown-item, .nav-item .nav-link').on('click', function(){
             const check = this.check1;
 
             if (check){
-                this.konssonuc = `In the verbal anamnesis taken from the patient, it was learned that there is a history of ${lagir} and no medication is used. ${islem} will be applied to the patient. Your evaluation is requested.`  ;
+                this.konssonuc = `In the verbal anamnesis, it was learned that the patient has a history of ${lagir} and uses no medication. The procedure ${islem} will be applied to the patient. Your evaluation is requested.`  ;
             } else if (ilac === ""){
-                this.konssonuc = `In the verbal anamnesis taken from the patient, it was learned that there is a history of ${lagir} and uses medication but does not know the name of the medication used. ${islem} will be applied to the patient. Your evaluation is requested.`  ;   
+                this.konssonuc = `In the verbal anamnesis, it was learned that the patient has a history of ${lagir} and uses medication, but the name is unknown. The procedure ${islem} will be applied to the patient. Your evaluation is requested.`  ;   
             }
             else{
-                this.konssonuc = `In the verbal anamnesis taken from the patient, it was learned that there is a history of ${lagir} and the name of the medication used is ${ilac}. ${islem} will be applied to the patient. Your evaluation is requested.`  ;
+                this.konssonuc = `In the verbal anamnesis, it was learned that the patient has a history of ${lagir} and uses the medication ${ilac}. The procedure ${islem} will be applied to the patient. Your evaluation is requested.`  ;
             }
         },
 
@@ -215,7 +225,7 @@ $('.dropdown-menu .dropdown-item, .nav-item .nav-link').on('click', function(){
             let tansiyondeger
 
             if (inr<=3){
-                inrdeger = "Low risk for bleeding, no objection to surgical extraction"
+                inrdeger = "Low risk for bleeding, no contraindication for surgical extraction"
             }else if (inr>3){
                 inrdeger = "Consultation required!"
             }
@@ -223,17 +233,17 @@ $('.dropdown-menu .dropdown-item, .nav-item .nav-link').on('click', function(){
             if (hemoglobin>18){
                 hemoglobindeger = "Consultation required!"
             }else if(hemoglobin>10){
-                hemoglobindeger = "All kinds of dental treatments can be performed."
+                hemoglobindeger = "Any dental treatment can be performed."
             }else if(hemoglobin>7){
-                hemoglobindeger = "Caution should be exercised. Wound healing may be delayed. General anesthesia/Sedation risk increases."
+                hemoglobindeger = "Caution advised. Wound healing may be delayed. Increased risk for general anesthesia/sedation."
             }else{
                 hemoglobindeger = "Consultation required!"
             }
 
             if (ha1c<7){
-                ha1cdeger = "All kinds of dental treatments can be performed."
+                ha1cdeger = "Any dental treatment can be performed."
             }else if (ha1c<9){
-                ha1cdeger = "Infection risk increases, wound healing is impaired. Prophylactic (preventive) antibiotics may be required."
+                ha1cdeger = "Increased risk of infection, impaired wound healing. Prophylactic (preventive) antibiotic may be required."
             }else{
                 ha1cdeger = "Consultation required!"
             }
@@ -241,9 +251,9 @@ $('.dropdown-menu .dropdown-item, .nav-item .nav-link').on('click', function(){
             if (buyuk<90 || kucuk<60){
                 tansiyondeger = "Hypotension. Risk of syncope!"
             }else if(buyuk<180 || kucuk<110){
-                tansiyondeger="In normal values"
+                tansiyondeger="Within normal limits"
             }else{
-                tansiyondeger = "Hypertension, Absolutely no procedure should be performed!"
+                tansiyondeger = "Hypertension, Absolutely no procedure!"
             }
             this.hemasonuc = `
                     <strong>INR:</strong> ${inrdeger} <br>
@@ -282,7 +292,7 @@ $('.dropdown-menu .dropdown-item, .nav-item .nav-link').on('click', function(){
                 }
             }
 
-            this.profilaksisonuc = `${prohesap} mg of ${ilac} should be used 30-60 minutes before the procedure!`;
+            this.profilaksisonuc = `${prohesap} mg ${ilac} should be used 30-60 minutes before the procedure!`;
         }
         
 
