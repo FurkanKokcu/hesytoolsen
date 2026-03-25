@@ -1,29 +1,32 @@
-const CACHE_ADI = "hesy-tools-v2"; // Versiyon güncelleyince burayı v2 yaparsın
+const CACHE_ADI = "hesy-tools-v3";
+
 const DOSYALAR = [
   "./",
 "./index.html",
 "./main.js",
 "./receteler.json",
 "./pedoguide.json",
-"./lathas.json",       // Eğer json kullanıyorsan
-"./herbst.json",       // Eğer json kullanıyorsan
-"./round-icon-new.png", // Logon
+"./lathas.json",
+"./herbst.json",
+"./round-icon-new.png",
+"./round-icon.png",
 "./who.png",
 "./mainlogo-Photoroom.png",
 "./manifest.json",
 "./materia.css",
 "./cyborg.css",
-"https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css",
+// Kullanılan CDN linkleri (Çevrimdışı çalışabilmesi için)
 "https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js",
 "https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js",
 "https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js",
 "https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js",
-"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-// NOT: Font Awesome kullanıyorsan linkini buraya tam ekle
+"https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js",
+"https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"
 ];
 
 // 1. KURULUM (Dosyaları Önbelleğe Al)
 self.addEventListener("install", (olay) => {
+  self.skipWaiting(); // Yeni versiyonu beklemeden hemen kur
   olay.waitUntil(
     caches.open(CACHE_ADI).then((cache) => {
       console.log("Önbellek oluşturuluyor...");
@@ -34,6 +37,7 @@ self.addEventListener("install", (olay) => {
 
 // 2. AKTİF OLMA (Eski Önbellekleri Temizle)
 self.addEventListener("activate", (olay) => {
+  olay.waitUntil(self.clients.claim()); // Sayfayı yenilemeye gerek kalmadan SW'yi devreye sok
   olay.waitUntil(
     caches.keys().then((cacheIsimleri) => {
       return Promise.all(
@@ -48,15 +52,30 @@ self.addEventListener("activate", (olay) => {
   );
 });
 
-// 3. FETCH (İnternet Yoksa Cache'den Ver)
+// 3. FETCH (Stale-While-Revalidate Stratejisi)
 self.addEventListener("fetch", (olay) => {
+  // Sadece GET isteklerini ve HTTP/HTTPS protokollerini yakala (Eklenti hatalarını önler)
+  if (olay.request.method !== 'GET' || !olay.request.url.startsWith('http')) return;
+
   olay.respondWith(
     caches.match(olay.request).then((cevap) => {
-      // Cache'de varsa onu döndür, yoksa internetten çek
-      return cevap || fetch(olay.request).catch(() => {
-        // Eğer internet de yoksa ve dosya cache'de yoksa (opsiyonel hata sayfası)
-        // return caches.match("./offline.html");
+      // Arka planda dosyaların güncel halini internetten çek
+      const internettenCek = fetch(olay.request).then((agCevabi) => {
+        // Eğer başarılı bir şekilde çekildiyse cache'i güncelle
+        if (agCevabi && agCevabi.status === 200) {
+          const kopyalananCevap = agCevabi.clone();
+          caches.open(CACHE_ADI).then((cache) => {
+            cache.put(olay.request, kopyalananCevap);
+          });
+        }
+        return agCevabi;
+      }).catch(() => {
+        console.log("İnternet yok, çevrimdışı veriler kullanılıyor.");
       });
+
+      // Varsa ANINDA cache'deki dosyayı göster, yoksa internetten geleni bekle
+      // Bu sayede uygulama saniyeden kısa sürede açılır ama arkadan veriler hep güncel kalır.
+      return cevap || internettenCek;
     })
   );
 });
