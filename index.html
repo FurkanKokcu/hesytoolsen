@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hesy Tools</title>
   <link rel="icon" type="round-icon" href="round-icon.png">
-  <link rel="stylesheet" href="materia.css" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
-  <link rel="stylesheet" href="cyborg.css" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="flatly.css" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
+  <link rel="stylesheet" href="darkly.css" media="(prefers-color-scheme: dark)">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -91,42 +91,88 @@
 
 <div class="container mt-4"><div class="tab-content">
   <div id="main" class="container tab-pane active">
+    <div class="text-center">
+    <h1>Welcome</h1>
+    <h2 x-text="user"></h2>
+    <p>For a reason, for health</p>
     <div class="alert alert-info alert-dismissible">
       <button type="button" class="close" data-dismiss="alert">&times;</button>
       <strong>Support the development of Hesy Tools!</strong>
       <p>Hesy Tools is a completely free and open-source project. If you find this tool useful in your daily practice, you can contribute to the growth of the project by sharing it with your colleagues.</p>
     </div>
+    <div class="card bg-primary text-white">
+      <div class="card-body" style="white-space: pre-wrap;"><strong>Periodontitis Calculator:</strong> Performs current periodontal Staging & Grading based on clinical attachment loss (CAL), number of teeth lost due to periodontal reasons, and smoking history.
 
-    <div class="text-center">
-    <h1>Welcome</h1>
-    <h2 x-text="user"></h2>
-    <p>For a reason, for health</p>
+<strong>Gingivitis Calculator:</strong> Calculates the BOP (Bleeding on Probing) index by proportioning the total number of surfaces probed and surfaces bleeding.
 
-    <img src="mainlogo-Photoroom.png" class="img-fluid">
+<strong>Consultation: </strong>Prepares a standardized medical consultation text to be referred to a physician (e.g., cardiology or endocrinology) according to the patient's systemic diseases, medication history, and planned invasive/non-invasive dental procedure.
+
+<strong>HemaMath:</strong> Evaluates the patient's risks of surgical bleeding, hemostasis, and wound healing (from an ASA classification perspective) by correlating BP (Blood Pressure), HbA1c, INR, and Hemoglobin values in the pre-operative process.
+
+<strong>Prescriptions:</strong> Provides ready-to-use e-prescription templates with age/condition-appropriate pharmacological agents, dosage (mg/tab), and posology information for common diagnoses such as acute apical abscess and pericoronitis.
+
+<strong>PedoGuide:</strong> A quick reference guide containing tooth eruption chronology and clinical behavior management strategies according to the age groups of pediatric patients.
+
+<strong>Prophylaxis Calculator:</strong> Calculates the antibiotic choice and milligram-based dose for infective endocarditis prophylaxis according to AHA (American Heart Association) standards based on the child's body weight (kg), oral medication tolerance, and penicillin allergy status.
+
+<strong>Trauma Assistant (Wizard):</strong> Performs triage according to anamnesis and clinical findings in dentoalveolar trauma (avulsion, luxation, crown-root fractures) cases. Provides step-by-step endodontic protocols (revascularization, apexification, calcium hydroxide application) and ideal flexible splinting duration according to the open/closed apex status of the tooth.
+
+<strong>Herbst Tests:</strong> Indexes theoretical and clinical information regarding the Herbst appliance/concept.
+
+<strong>Herbst Tests:</strong> An experimental artificial intelligence module that attempts to determine the estimated space maintainer indication and type using camera/image processing in early primary tooth loss.</div>
     </div>
-    <div>
 
-      <div id="changelog" class="collapse">
-      </div>
     </div>
 
   </div>
   <div id="periotab" class="container tab-pane fade text-center" x-data={atasmankaybi:0}>
+    <div class="container">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#who">Who Probe</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#williams">Williams Probe</a>
+      </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div id="who" class="container tab-pane active"><br>
+        <form>
+          <div class="form-group">
+            <img class="w-100"src="who.png" alt="">
+
+            <input type="range"
+                  class="form-control-range"
+                  x-model="atasmankaybi"
+                  min="0"
+                  max="12"
+                  step="0.5"
+                  value="0">
+          </div>
+        </form>
+      </div>
+      <div id="williams" class="container tab-pane fade"><br>
+        <form>
+          <div class="form-group">
+            <img class="w-100"src="williams.png" alt="">
+
+            <input type="range"
+                  class="form-control-range"
+                  x-model="atasmankaybi"
+                  min="0"
+                  max="11"
+                  step="1"
+                  value="0">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
     <div class="form-group text-center">
       <label for="usr"></label>
-      <form>
-        <div class="form-group">
-          <img class="w-100"src="who.png" alt="">
-
-          <input type="range"
-                class="form-control-range"
-                x-model="atasmankaybi"
-                min="0"
-                max="12"
-                step="0.5"
-                value="0">
-        </div>
-      </form>
       <p>Number of lost teeth:</p>
       <input type="number" class="form-control" x-model="diskaybi">
       <hr>
